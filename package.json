@@ -1,0 +1,32 @@
+{
+  "name": "demo-animal-forest",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "eslint-config-react-app": "^3.0.8",
+    "pubnub-react": "^1.2.0",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-scripts": "2.1.8",
+    "sass": "^1.20.1"
+  },
+  "scripts": {
+    "start": "concurrently --kill-others-on-fail \"npm run sass-watch\" \"react-scripts start\"",
+    "build": "sass src/styles/scss/style.scss:src/styles/css/style.css && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "sass-watch": "cd src/styles && sass --watch scss/style.scss:css/style.css"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
